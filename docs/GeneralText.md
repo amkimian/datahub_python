@@ -1,0 +1,10 @@
+# GeneralText
+
+## Properties
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**content** | **str** | The content of the general text | [optional] 
+
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+
+
