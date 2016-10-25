@@ -1,4 +1,4 @@
-# swagger_client.AdminApi
+# mimir_client.AdminApi
 
 All URIs are relative to *http://localhost:8081/*
 
@@ -15,14 +15,14 @@ Method | HTTP request | Description
 ### Example 
 ```python
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import mimir_client
+from mimir_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.AdminApi()
+api_instance = mimir_client.AdminApi()
 admin_key = 'admin_key_example' # str | The admin user api key
-body = swagger_client.User() # User | A new user
+body = mimir_client.User() # User | A new user
 
 try: 
     api_response = api_instance.create_user(admin_key, body)

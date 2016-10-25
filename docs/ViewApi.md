@@ -1,4 +1,4 @@
-# swagger_client.ViewApi
+# mimir_client.ViewApi
 
 All URIs are relative to *http://localhost:8081/*
 
@@ -19,12 +19,12 @@ Returns releases for a given data set
 ### Example 
 ```python
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import mimir_client
+from mimir_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.ViewApi()
+api_instance = mimir_client.ViewApi()
 api_key = 'api_key_example' # str | The user api key
 user_id = 'user_id_example' # str | The user id that owns the data set
 dataset = 'dataset_example' # str | The id of the data set
@@ -69,12 +69,12 @@ Returns the element information for a given release
 ### Example 
 ```python
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import mimir_client
+from mimir_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.ViewApi()
+api_instance = mimir_client.ViewApi()
 api_key = 'api_key_example' # str | The user api key
 user_id = 'user_id_example' # str | 
 dataset = 'dataset_example' # str | 
@@ -121,12 +121,12 @@ Returns view information for datasets of a user
 ### Example 
 ```python
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import mimir_client
+from mimir_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.ViewApi()
+api_instance = mimir_client.ViewApi()
 api_key = 'api_key_example' # str | The user api key
 page = 56 # int | The page of results to return (optional)
 

@@ -1,4 +1,4 @@
-# swagger_client.DataApi
+# mimir_client.DataApi
 
 All URIs are relative to *http://localhost:8081/*
 
@@ -18,12 +18,12 @@ Returns a block of CSV data
 ### Example 
 ```python
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import mimir_client
+from mimir_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.DataApi()
+api_instance = mimir_client.DataApi()
 api_key = 'api_key_example' # str | The user api key
 owner = 'owner_example' # str | The owner of the data element
 dataset = 'dataset_example' # str | The name of the data set
@@ -77,12 +77,12 @@ Writes a block of CSV data
 ### Example 
 ```python
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import mimir_client
+from mimir_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.DataApi()
+api_instance = mimir_client.DataApi()
 api_key = 'api_key_example' # str | The user api key
 owner = 'owner_example' # str | The owner of the data element
 dataset = 'dataset_example' # str | The name of the data set
