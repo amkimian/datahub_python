@@ -11,6 +11,7 @@ Name | Type | Description | Notes
 **sample_release** | **str** | The id of a release that contains a sample of this data set | [optional] 
 **sample_element** | **str** | The id of an element in that release that contains the data for a sample | [optional] 
 **tags** | **list[str]** | Searchable terms for this data set | [optional] 
+**price** | [**PriceInfo**](PriceInfo.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

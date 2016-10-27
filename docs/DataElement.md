@@ -16,6 +16,7 @@ Name | Type | Description | Notes
 **content** | **str** | If the type is text, this is the text | [optional] 
 **block_id** | **int** | If the type is csv, this is the next block when added | [optional] 
 **key_field** | **str** | If the type is keyed, this is the key field that represents the unique key | [optional] 
+**published** | **bool** | Whether this element has been published (by publishing its release) | [optional] 
 **display_info** | [**DataElementDisplayInfo**](DataElementDisplayInfo.md) |  | [optional] 
 **csv_info** | [**DataElementCsvInfo**](DataElementCsvInfo.md) |  | [optional] 
 

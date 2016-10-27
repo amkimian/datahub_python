@@ -4,6 +4,7 @@ from __future__ import absolute_import
 from .admin_api import AdminApi
 from .data_api import DataApi
 from .dataset_api import DatasetApi
+from .default_api import DefaultApi
 from .element_api import ElementApi
 from .marketplace_api import MarketplaceApi
 from .release_api import ReleaseApi

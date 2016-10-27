@@ -7,6 +7,7 @@ Method | HTTP request | Description
 [**add_release**](ReleaseApi.md#add_release) | **POST** /releases/{userId}/{dataSet} | Create a new open release
 [**delete_release**](ReleaseApi.md#delete_release) | **DELETE** /releases/{userId}/{dataSet}/{release} | Get release information
 [**get_release**](ReleaseApi.md#get_release) | **GET** /releases/{userId}/{dataSet}/{release} | Get release information
+[**publish_release**](ReleaseApi.md#publish_release) | **GET** /release/publish/{userId}/{dataSet}/{release} | Publish a release
 
 
 # **add_release**
@@ -150,6 +151,59 @@ Name | Type | Description  | Notes
  **data_set** | **str**| The id of the data set | 
  **release** | **str**| The id of the release | 
  **api_key** | **str**| The user api key | [optional] 
+
+### Return type
+
+[**DataSetRelease**](DataSetRelease.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **publish_release**
+> DataSetRelease publish_release(api_key, user_id, data_set, release)
+
+Publish a release
+
+This marks a release as published 
+
+### Example 
+```python
+import time
+import mimir_client
+from mimir_client.rest import ApiException
+from pprint import pprint
+
+# create an instance of the API class
+api_instance = mimir_client.ReleaseApi()
+api_key = 'api_key_example' # str | The user api key
+user_id = 'user_id_example' # str | The id of the user that this dataset is associated with
+data_set = 'data_set_example' # str | The id of the data set
+release = 'release_example' # str | The id of the release
+
+try: 
+    # Publish a release
+    api_response = api_instance.publish_release(api_key, user_id, data_set, release)
+    pprint(api_response)
+except ApiException as e:
+    print "Exception when calling ReleaseApi->publish_release: %s\n" % e
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **api_key** | **str**| The user api key | 
+ **user_id** | **str**| The id of the user that this dataset is associated with | 
+ **data_set** | **str**| The id of the data set | 
+ **release** | **str**| The id of the release | 
 
 ### Return type
 

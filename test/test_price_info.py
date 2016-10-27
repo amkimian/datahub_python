@@ -22,32 +22,32 @@
     limitations under the License.
 """
 
+from __future__ import absolute_import
+
+import os
 import sys
-from setuptools import setup, find_packages
+import unittest
 
-NAME = "mimir_client"
-VERSION = "1.0.0"
+import mimir_client
+from mimir_client.rest import ApiException
+from mimir_client.models.price_info import PriceInfo
 
-# To install the library, run the following
-#
-# python setup.py install
-#
-# prerequisite: setuptools
-# http://pypi.python.org/pypi/setuptools
 
-REQUIRES = ["urllib3 >= 1.15", "six >= 1.10", "certifi", "python-dateutil"]
+class TestPriceInfo(unittest.TestCase):
+    """ PriceInfo unit test stubs """
 
-setup(
-    name=NAME,
-    version=VERSION,
-    description="Mimir DataHub API",
-    author_email="",
-    url="",
-    keywords=["Swagger", "Mimir DataHub API"],
-    install_requires=REQUIRES,
-    packages=find_packages(),
-    include_package_data=True,
-    long_description="""\
-    Mimir DataHub API
-    """
-)
+    def setUp(self):
+        pass
+
+    def tearDown(self):
+        pass
+
+    def testPriceInfo(self):
+        """
+        Test PriceInfo
+        """
+        model = mimir_client.models.price_info.PriceInfo()
+
+
+if __name__ == '__main__':
+    unittest.main()
