@@ -1,21 +1,21 @@
-# datahub_client.ViewApi
+# datahub_client.InvoiceApi
 
 All URIs are relative to *http://localhost:8081/*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**get_data_set_releases**](ViewApi.md#get_data_set_releases) | **GET** /view/releases/{userId}/{dataset} | 
-[**get_release_elements**](ViewApi.md#get_release_elements) | **GET** /view/elements/{userId}/{dataset}/{release} | 
-[**get_user_subscriptions**](ViewApi.md#get_user_subscriptions) | **GET** /view/subscriptions | 
-[**get_user_views**](ViewApi.md#get_user_views) | **GET** /view/getUserViews | 
+[**add_subscription_to_invoice**](InvoiceApi.md#add_subscription_to_invoice) | **GET** /invoice/addSubscription/{owner}/{dataset} | 
+[**get_cart**](InvoiceApi.md#get_cart) | **GET** /invoice/retrieveCurrent | 
+[**get_invoices**](InvoiceApi.md#get_invoices) | **GET** /invoice/retrieve | 
+[**process_cart**](InvoiceApi.md#process_cart) | **GET** /invoice/processCurrent | 
 
 
-# **get_data_set_releases**
-> list[DataSetRelease] get_data_set_releases(api_key, user_id, dataset)
+# **add_subscription_to_invoice**
+> Invoice add_subscription_to_invoice(api_key, owner, dataset)
 
 
 
-Returns releases for a given data set
+Adds the subscription to the current users current invoice
 
 ### Example 
 ```python
@@ -25,16 +25,16 @@ from datahub_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = datahub_client.ViewApi()
+api_instance = datahub_client.InvoiceApi()
 api_key = 'api_key_example' # str | The user api key
-user_id = 'user_id_example' # str | The user id that owns the data set
-dataset = 'dataset_example' # str | The id of the data set
+owner = 'owner_example' # str | The owner of the data element
+dataset = 'dataset_example' # str | The name of the data set
 
 try: 
-    api_response = api_instance.get_data_set_releases(api_key, user_id, dataset)
+    api_response = api_instance.add_subscription_to_invoice(api_key, owner, dataset)
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling ViewApi->get_data_set_releases: %s\n" % e
+    print "Exception when calling InvoiceApi->add_subscription_to_invoice: %s\n" % e
 ```
 
 ### Parameters
@@ -42,12 +42,12 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **api_key** | **str**| The user api key | 
- **user_id** | **str**| The user id that owns the data set | 
- **dataset** | **str**| The id of the data set | 
+ **owner** | **str**| The owner of the data element | 
+ **dataset** | **str**| The name of the data set | 
 
 ### Return type
 
-[**list[DataSetRelease]**](DataSetRelease.md)
+[**Invoice**](Invoice.md)
 
 ### Authorization
 
@@ -56,16 +56,16 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json
+ - **Accept**: Not defined
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **get_release_elements**
-> list[DataElement] get_release_elements(api_key, user_id, dataset, release)
+# **get_cart**
+> Invoice get_cart(api_key)
 
 
 
-Returns the element information for a given release
+retrieve the current open oneoff invoice
 
 ### Example 
 ```python
@@ -75,17 +75,14 @@ from datahub_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = datahub_client.ViewApi()
+api_instance = datahub_client.InvoiceApi()
 api_key = 'api_key_example' # str | The user api key
-user_id = 'user_id_example' # str | 
-dataset = 'dataset_example' # str | 
-release = 'release_example' # str | 
 
 try: 
-    api_response = api_instance.get_release_elements(api_key, user_id, dataset, release)
+    api_response = api_instance.get_cart(api_key)
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling ViewApi->get_release_elements: %s\n" % e
+    print "Exception when calling InvoiceApi->get_cart: %s\n" % e
 ```
 
 ### Parameters
@@ -93,13 +90,10 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **api_key** | **str**| The user api key | 
- **user_id** | **str**|  | 
- **dataset** | **str**|  | 
- **release** | **str**|  | 
 
 ### Return type
 
-[**list[DataElement]**](DataElement.md)
+[**Invoice**](Invoice.md)
 
 ### Authorization
 
@@ -108,14 +102,16 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json
+ - **Accept**: Not defined
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **get_user_subscriptions**
-> list[Subscription] get_user_subscriptions(api_key, page=page)
+# **get_invoices**
+> list[Invoice] get_invoices(api_key, page=page)
 
 
+
+retrieve a page of invoices
 
 ### Example 
 ```python
@@ -125,15 +121,15 @@ from datahub_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = datahub_client.ViewApi()
+api_instance = datahub_client.InvoiceApi()
 api_key = 'api_key_example' # str | The user api key
-page = 56 # int | The page of results to return (optional)
+page = 56 # int | The page to show (optional)
 
 try: 
-    api_response = api_instance.get_user_subscriptions(api_key, page=page)
+    api_response = api_instance.get_invoices(api_key, page=page)
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling ViewApi->get_user_subscriptions: %s\n" % e
+    print "Exception when calling InvoiceApi->get_invoices: %s\n" % e
 ```
 
 ### Parameters
@@ -141,11 +137,11 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **api_key** | **str**| The user api key | 
- **page** | **int**| The page of results to return | [optional] 
+ **page** | **int**| The page to show | [optional] 
 
 ### Return type
 
-[**list[Subscription]**](Subscription.md)
+[**list[Invoice]**](Invoice.md)
 
 ### Authorization
 
@@ -154,16 +150,16 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json
+ - **Accept**: Not defined
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **get_user_views**
-> list[DataSetView] get_user_views(api_key, page=page)
+# **process_cart**
+> Invoice process_cart(api_key)
 
 
 
-Returns view information for datasets of a user
+Process a successful payment
 
 ### Example 
 ```python
@@ -173,15 +169,14 @@ from datahub_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = datahub_client.ViewApi()
+api_instance = datahub_client.InvoiceApi()
 api_key = 'api_key_example' # str | The user api key
-page = 56 # int | The page of results to return (optional)
 
 try: 
-    api_response = api_instance.get_user_views(api_key, page=page)
+    api_response = api_instance.process_cart(api_key)
     pprint(api_response)
 except ApiException as e:
-    print "Exception when calling ViewApi->get_user_views: %s\n" % e
+    print "Exception when calling InvoiceApi->process_cart: %s\n" % e
 ```
 
 ### Parameters
@@ -189,11 +184,10 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **api_key** | **str**| The user api key | 
- **page** | **int**| The page of results to return | [optional] 
 
 ### Return type
 
-[**list[DataSetView]**](DataSetView.md)
+[**Invoice**](Invoice.md)
 
 ### Authorization
 
@@ -202,7 +196,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json
+ - **Accept**: Not defined
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

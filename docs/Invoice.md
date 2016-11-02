@@ -11,6 +11,7 @@ Name | Type | Description | Notes
 **month** | **int** | The month this invoice applies to (the cycle) | [optional] 
 **status** | **str** | The status of this invoice (open, paid, cancelled) | [optional] 
 **entries** | [**list[InvoiceEntry]**](InvoiceEntry.md) | The entries of this invoice | [optional] 
+**subtotal** | **int** | Subtotal before tax in cents | [optional] 
 **tax** | **int** | Any tax due on this invoice in cents | [optional] 
 **total** | **int** | The total amount of the invoice (in cents in case the tax) | [optional] 
 

@@ -1,4 +1,4 @@
-# mimir_client.ReleaseApi
+# datahub_client.ReleaseApi
 
 All URIs are relative to *http://localhost:8081/*
 
@@ -20,15 +20,15 @@ This creates a new release in a data set. The release defaults to the open (and 
 ### Example 
 ```python
 import time
-import mimir_client
-from mimir_client.rest import ApiException
+import datahub_client
+from datahub_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = mimir_client.ReleaseApi()
+api_instance = datahub_client.ReleaseApi()
 user_id = 'user_id_example' # str | The id of the user that this dataset is associated with
 data_set = 'data_set_example' # str | The id of the data set
-body = mimir_client.DataSetRelease() # DataSetRelease | Release object that defines the element in a data set
+body = datahub_client.DataSetRelease() # DataSetRelease | Release object that defines the element in a data set
 api_key = 'api_key_example' # str | The user api key (optional)
 
 try: 
@@ -72,12 +72,12 @@ This returns information about a release
 ### Example 
 ```python
 import time
-import mimir_client
-from mimir_client.rest import ApiException
+import datahub_client
+from datahub_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = mimir_client.ReleaseApi()
+api_instance = datahub_client.ReleaseApi()
 user_id = 'user_id_example' # str | The id of the user that this dataset is associated with
 data_set = 'data_set_example' # str | The id of the data set
 release = 'release_example' # str | The id of the release
@@ -124,12 +124,12 @@ This returns information about a release
 ### Example 
 ```python
 import time
-import mimir_client
-from mimir_client.rest import ApiException
+import datahub_client
+from datahub_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = mimir_client.ReleaseApi()
+api_instance = datahub_client.ReleaseApi()
 user_id = 'user_id_example' # str | The id of the user that this dataset is associated with
 data_set = 'data_set_example' # str | The id of the data set
 release = 'release_example' # str | The id of the release
@@ -177,12 +177,12 @@ This marks a release as published
 ### Example 
 ```python
 import time
-import mimir_client
-from mimir_client.rest import ApiException
+import datahub_client
+from datahub_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = mimir_client.ReleaseApi()
+api_instance = datahub_client.ReleaseApi()
 api_key = 'api_key_example' # str | The user api key
 user_id = 'user_id_example' # str | The id of the user that this dataset is associated with
 data_set = 'data_set_example' # str | The id of the data set

@@ -1,4 +1,4 @@
-# mimir_client.UserApi
+# datahub_client.UserApi
 
 All URIs are relative to *http://localhost:8081/*
 
@@ -20,12 +20,12 @@ Method | HTTP request | Description
 ### Example 
 ```python
 import time
-import mimir_client
-from mimir_client.rest import ApiException
+import datahub_client
+from datahub_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = mimir_client.UserApi()
+api_instance = datahub_client.UserApi()
 user_id = 'user_id_example' # str | 
 admin_key = 'admin_key_example' # str | The admin user api key (optional)
 api_key = 'api_key_example' # str | The user api key (optional)
@@ -67,12 +67,12 @@ No authorization required
 ### Example 
 ```python
 import time
-import mimir_client
-from mimir_client.rest import ApiException
+import datahub_client
+from datahub_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = mimir_client.UserApi()
+api_instance = datahub_client.UserApi()
 user_id = 'user_id_example' # str | 
 admin_key = 'admin_key_example' # str | The admin user api key (optional)
 api_key = 'api_key_example' # str | The user api key (optional)
@@ -115,12 +115,12 @@ No authorization required
 ### Example 
 ```python
 import time
-import mimir_client
-from mimir_client.rest import ApiException
+import datahub_client
+from datahub_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = mimir_client.UserApi()
+api_instance = datahub_client.UserApi()
 admin_key = 'admin_key_example' # str | The admin user api key
 email = 'email_example' # str | The email to search for
 
@@ -161,12 +161,12 @@ No authorization required
 ### Example 
 ```python
 import time
-import mimir_client
-from mimir_client.rest import ApiException
+import datahub_client
+from datahub_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = mimir_client.UserApi()
+api_instance = datahub_client.UserApi()
 admin_key = 'admin_key_example' # str | The admin user api key
 tag_name = 'tag_name_example' # str | The tag field to search (e.g. github)
 tag_value = 'tag_value_example' # str | The tag value to search
@@ -209,12 +209,12 @@ No authorization required
 ### Example 
 ```python
 import time
-import mimir_client
-from mimir_client.rest import ApiException
+import datahub_client
+from datahub_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = mimir_client.UserApi()
+api_instance = datahub_client.UserApi()
 admin_key = 'admin_key_example' # str | The admin user api key
 token = 'token_example' # str | The token passed by an email
 expiry = '2013-10-20' # date | The latest date for which the token is valid
@@ -257,14 +257,14 @@ No authorization required
 ### Example 
 ```python
 import time
-import mimir_client
-from mimir_client.rest import ApiException
+import datahub_client
+from datahub_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = mimir_client.UserApi()
+api_instance = datahub_client.UserApi()
 user_id = 'user_id_example' # str | 
-body = mimir_client.User() # User | 
+body = datahub_client.User() # User | 
 api_key = 'api_key_example' # str | The user api key (optional)
 
 try: 

@@ -1,4 +1,4 @@
-# mimir_client.MarketplaceApi
+# datahub_client.MarketplaceApi
 
 All URIs are relative to *http://localhost:8081/*
 
@@ -15,12 +15,12 @@ Method | HTTP request | Description
 ### Example 
 ```python
 import time
-import mimir_client
-from mimir_client.rest import ApiException
+import datahub_client
+from datahub_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = mimir_client.MarketplaceApi()
+api_instance = datahub_client.MarketplaceApi()
 page = 56 # int | Page to return (defaults to zero) (optional)
 limit = 56 # int | The maximum amount of records to be returned (the size of the page) (optional)
 

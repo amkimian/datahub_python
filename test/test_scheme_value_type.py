@@ -22,32 +22,32 @@
     limitations under the License.
 """
 
+from __future__ import absolute_import
+
+import os
 import sys
-from setuptools import setup, find_packages
+import unittest
 
-NAME = "datahub_client"
-VERSION = "1.0.0"
+import datahub_client
+from datahub_client.rest import ApiException
+from datahub_client.models.scheme_value_type import SchemeValueType
 
-# To install the library, run the following
-#
-# python setup.py install
-#
-# prerequisite: setuptools
-# http://pypi.python.org/pypi/setuptools
 
-REQUIRES = ["urllib3 >= 1.15", "six >= 1.10", "certifi", "python-dateutil"]
+class TestSchemeValueType(unittest.TestCase):
+    """ SchemeValueType unit test stubs """
 
-setup(
-    name=NAME,
-    version=VERSION,
-    description="DataHub API",
-    author_email="",
-    url="",
-    keywords=["Swagger", "DataHub API"],
-    install_requires=REQUIRES,
-    packages=find_packages(),
-    include_package_data=True,
-    long_description="""\
-    DataHub API
-    """
-)
+    def setUp(self):
+        pass
+
+    def tearDown(self):
+        pass
+
+    def testSchemeValueType(self):
+        """
+        Test SchemeValueType
+        """
+        model = datahub_client.models.scheme_value_type.SchemeValueType()
+
+
+if __name__ == '__main__':
+    unittest.main()

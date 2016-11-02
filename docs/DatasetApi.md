@@ -1,4 +1,4 @@
-# mimir_client.DatasetApi
+# datahub_client.DatasetApi
 
 All URIs are relative to *http://localhost:8081/*
 
@@ -24,14 +24,14 @@ This creates a new data set that can then be added to
 ### Example 
 ```python
 import time
-import mimir_client
-from mimir_client.rest import ApiException
+import datahub_client
+from datahub_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = mimir_client.DatasetApi()
+api_instance = datahub_client.DatasetApi()
 user_id = 'user_id_example' # str | The id of the user that this dataset is associated with
-body = mimir_client.DataSet() # DataSet | DataSet object that defines the element
+body = datahub_client.DataSet() # DataSet | DataSet object that defines the element
 api_key = 'api_key_example' # str | The user api key (optional)
 
 try: 
@@ -74,12 +74,12 @@ Remove a data set and all releases and elements
 ### Example 
 ```python
 import time
-import mimir_client
-from mimir_client.rest import ApiException
+import datahub_client
+from datahub_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = mimir_client.DatasetApi()
+api_instance = datahub_client.DatasetApi()
 user_id = 'user_id_example' # str | The id of the user owning this dataset
 data_set = 'data_set_example' # str | The id of the dataset
 api_key = 'api_key_example' # str | The user api key (optional)
@@ -122,12 +122,12 @@ No authorization required
 ### Example 
 ```python
 import time
-import mimir_client
-from mimir_client.rest import ApiException
+import datahub_client
+from datahub_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = mimir_client.DatasetApi()
+api_instance = datahub_client.DatasetApi()
 api_key = 'api_key_example' # str | The user api key (optional)
 tags = ['tags_example'] # list[str] | Tags to filter by (optional)
 page = 56 # int | Page to return (defaults to zero) (optional)
@@ -170,12 +170,12 @@ No authorization required
 ### Example 
 ```python
 import time
-import mimir_client
-from mimir_client.rest import ApiException
+import datahub_client
+from datahub_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = mimir_client.DatasetApi()
+api_instance = datahub_client.DatasetApi()
 api_key = 'api_key_example' # str | The user api key
 tags = ['tags_example'] # list[str] | Tags to filter by (optional)
 page = 56 # int | Page to return (defaults to zero) (optional)
@@ -222,12 +222,12 @@ Returns a data set
 ### Example 
 ```python
 import time
-import mimir_client
-from mimir_client.rest import ApiException
+import datahub_client
+from datahub_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = mimir_client.DatasetApi()
+api_instance = datahub_client.DatasetApi()
 user_id = 'user_id_example' # str | The id of the user owning this dataset
 data_set = 'data_set_example' # str | The id of the dataset
 api_key = 'api_key_example' # str | The user api key (optional)
@@ -271,12 +271,12 @@ No authorization required
 ### Example 
 ```python
 import time
-import mimir_client
-from mimir_client.rest import ApiException
+import datahub_client
+from datahub_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = mimir_client.DatasetApi()
+api_instance = datahub_client.DatasetApi()
 page = 56 # int | Page to return (defaults to zero) (optional)
 limit = 56 # int | The maximum amount of records to be returned (the size of the page) (optional)
 
@@ -317,12 +317,12 @@ No authorization required
 ### Example 
 ```python
 import time
-import mimir_client
-from mimir_client.rest import ApiException
+import datahub_client
+from datahub_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = mimir_client.DatasetApi()
+api_instance = datahub_client.DatasetApi()
 api_key = 'api_key_example' # str | The user api key
 page = 56 # int | Page to return (defaults to zero) (optional)
 
@@ -365,16 +365,16 @@ Update an existing data set.
 ### Example 
 ```python
 import time
-import mimir_client
-from mimir_client.rest import ApiException
+import datahub_client
+from datahub_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = mimir_client.DatasetApi()
+api_instance = datahub_client.DatasetApi()
 api_key = 'api_key_example' # str | The user api key
 owner = 'owner_example' # str | The id of the user that this dataset is associated with
 dataset = 'dataset_example' # str | The data set id to update
-body = mimir_client.DataSet() # DataSet | DataSet object that defines the element
+body = datahub_client.DataSet() # DataSet | DataSet object that defines the element
 
 try: 
     # Update an existing data set.

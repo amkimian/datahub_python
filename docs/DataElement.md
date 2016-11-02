@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 **mime_type** | **str** | The mime type of the data element | [optional] 
 **description** | **str** | Some information about this element | [optional] 
 **type** | **str** | The underlying data type of this element | [optional] 
-**schema** | **str** | The underlying format of the data | [optional] 
+**schemes** | **list[str]** | The underlying format of the data | [optional] 
 **state** | **str** | The state of this element (is it published?) | [optional] 
 **storage** | **str** | Where blocks are stored for this element | [optional] 
 **content** | **str** | If the type is text, this is the text | [optional] 

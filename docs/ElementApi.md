@@ -1,4 +1,4 @@
-# mimir_client.ElementApi
+# datahub_client.ElementApi
 
 All URIs are relative to *http://localhost:8081/*
 
@@ -20,16 +20,16 @@ This creates a new element in a release in a data set. The element defaults to t
 ### Example 
 ```python
 import time
-import mimir_client
-from mimir_client.rest import ApiException
+import datahub_client
+from datahub_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = mimir_client.ElementApi()
+api_instance = datahub_client.ElementApi()
 user_id = 'user_id_example' # str | The id of the user that this dataset is associated with
 data_set = 'data_set_example' # str | The id of the data set
 release = 'release_example' # str | The id of the release this element belongs to
-body = mimir_client.DataElement() # DataElement | Element object that defines the element in a data set
+body = datahub_client.DataElement() # DataElement | Element object that defines the element in a data set
 api_key = 'api_key_example' # str | The user api key (optional)
 
 try: 
@@ -74,12 +74,12 @@ This removes an element
 ### Example 
 ```python
 import time
-import mimir_client
-from mimir_client.rest import ApiException
+import datahub_client
+from datahub_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = mimir_client.ElementApi()
+api_instance = datahub_client.ElementApi()
 user_id = 'user_id_example' # str | The id of the user that this dataset is associated with
 data_set = 'data_set_example' # str | The id of the data set
 release = 'release_example' # str | The id of the release
@@ -128,12 +128,12 @@ This returns information about an element
 ### Example 
 ```python
 import time
-import mimir_client
-from mimir_client.rest import ApiException
+import datahub_client
+from datahub_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = mimir_client.ElementApi()
+api_instance = datahub_client.ElementApi()
 user_id = 'user_id_example' # str | The id of the user that this dataset is associated with
 data_set = 'data_set_example' # str | The id of the data set
 release = 'release_example' # str | The id of the release
@@ -183,17 +183,17 @@ Updates an element
 ### Example 
 ```python
 import time
-import mimir_client
-from mimir_client.rest import ApiException
+import datahub_client
+from datahub_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = mimir_client.ElementApi()
+api_instance = datahub_client.ElementApi()
 user_id = 'user_id_example' # str | The id of the user that this dataset is associated with
 data_set = 'data_set_example' # str | The id of the data set
 release = 'release_example' # str | The id of the release
 element = 'element_example' # str | The id of the element
-body = mimir_client.DataElement() # DataElement | The updated element
+body = datahub_client.DataElement() # DataElement | The updated element
 api_key = 'api_key_example' # str | The user api key (optional)
 
 try: 
