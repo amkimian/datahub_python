@@ -175,13 +175,13 @@ class QueryApi(object):
 
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.\
-            select_header_accept(['text/plain'])
+            select_header_accept(['application/json', 'text/plain'])
         if not header_params['Accept']:
             del header_params['Accept']
 
         # HTTP header `Content-Type`
         header_params['Content-Type'] = self.api_client.\
-            select_header_content_type([])
+            select_header_content_type(['application/json'])
 
         # Authentication setting
         auth_settings = []
