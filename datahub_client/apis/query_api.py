@@ -74,7 +74,7 @@ class QueryApi(object):
         :param str query: The query, currently a string rep of a JSON mongo query (required)
         :param int page: The page of data to return
         :param int limit: The maximum rows to return
-        :return: None
+        :return: str
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -108,7 +108,7 @@ class QueryApi(object):
         :param str query: The query, currently a string rep of a JSON mongo query (required)
         :param int page: The page of data to return
         :param int limit: The maximum rows to return
-        :return: None
+        :return: str
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -193,7 +193,7 @@ class QueryApi(object):
                                             body=body_params,
                                             post_params=form_params,
                                             files=local_var_files,
-                                            response_type=None,
+                                            response_type='str',
                                             auth_settings=auth_settings,
                                             callback=params.get('callback'),
                                             _return_http_data_only=params.get('_return_http_data_only'))

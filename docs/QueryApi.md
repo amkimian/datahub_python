@@ -8,7 +8,7 @@ Method | HTTP request | Description
 
 
 # **query_data**
-> query_data(api_key, owner, dataset, release, element, query, page=page, limit=limit)
+> str query_data(api_key, owner, dataset, release, element, query, page=page, limit=limit)
 
 
 
@@ -33,7 +33,8 @@ page = 56 # int | The page of data to return (optional)
 limit = 56 # int | The maximum rows to return (optional)
 
 try: 
-    api_instance.query_data(api_key, owner, dataset, release, element, query, page=page, limit=limit)
+    api_response = api_instance.query_data(api_key, owner, dataset, release, element, query, page=page, limit=limit)
+    pprint(api_response)
 except ApiException as e:
     print "Exception when calling QueryApi->query_data: %s\n" % e
 ```
@@ -53,7 +54,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+**str**
 
 ### Authorization
 
