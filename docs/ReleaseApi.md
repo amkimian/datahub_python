@@ -5,13 +5,13 @@ All URIs are relative to *http://localhost:8081/*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**add_release**](ReleaseApi.md#add_release) | **POST** /releases/{userId}/{dataSet} | Create a new open release
-[**delete_release**](ReleaseApi.md#delete_release) | **DELETE** /releases/{userId}/{dataSet}/{release} | Get release information
+[**delete_release**](ReleaseApi.md#delete_release) | **DELETE** /releases/{userId}/{dataSet}/{release} | Delete release information
 [**get_release**](ReleaseApi.md#get_release) | **GET** /releases/{userId}/{dataSet}/{release} | Get release information
 [**publish_release**](ReleaseApi.md#publish_release) | **GET** /release/publish/{userId}/{dataSet}/{release} | Publish a release
 
 
 # **add_release**
-> add_release(user_id, data_set, body, api_key=api_key)
+> GeneralStatus add_release(user_id, data_set, body, api_key=api_key)
 
 Create a new open release
 
@@ -33,7 +33,8 @@ api_key = 'api_key_example' # str | The user api key (optional)
 
 try: 
     # Create a new open release
-    api_instance.add_release(user_id, data_set, body, api_key=api_key)
+    api_response = api_instance.add_release(user_id, data_set, body, api_key=api_key)
+    pprint(api_response)
 except ApiException as e:
     print "Exception when calling ReleaseApi->add_release: %s\n" % e
 ```
@@ -49,7 +50,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**GeneralStatus**](GeneralStatus.md)
 
 ### Authorization
 
@@ -63,11 +64,11 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **delete_release**
-> delete_release(user_id, data_set, release, api_key=api_key)
+> GeneralStatus delete_release(user_id, data_set, release, api_key=api_key)
 
-Get release information
+Delete release information
 
-This returns information about a release 
+This deletes a release 
 
 ### Example 
 ```python
@@ -84,8 +85,9 @@ release = 'release_example' # str | The id of the release
 api_key = 'api_key_example' # str | The user api key (optional)
 
 try: 
-    # Get release information
-    api_instance.delete_release(user_id, data_set, release, api_key=api_key)
+    # Delete release information
+    api_response = api_instance.delete_release(user_id, data_set, release, api_key=api_key)
+    pprint(api_response)
 except ApiException as e:
     print "Exception when calling ReleaseApi->delete_release: %s\n" % e
 ```
@@ -101,7 +103,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**GeneralStatus**](GeneralStatus.md)
 
 ### Authorization
 

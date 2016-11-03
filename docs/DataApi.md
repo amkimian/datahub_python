@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 
 # **get_csv_data**
-> get_csv_data(api_key, owner, dataset, release, element, with_header=with_header, skip=skip, limit=limit)
+> str get_csv_data(api_key, owner, dataset, release, element, with_header=with_header, skip=skip, limit=limit)
 
 
 
@@ -35,7 +35,8 @@ skip = 56 # int | which page to show (optional)
 limit = 56 # int | How many records to return (optional)
 
 try: 
-    api_instance.get_csv_data(api_key, owner, dataset, release, element, with_header=with_header, skip=skip, limit=limit)
+    api_response = api_instance.get_csv_data(api_key, owner, dataset, release, element, with_header=with_header, skip=skip, limit=limit)
+    pprint(api_response)
 except ApiException as e:
     print "Exception when calling DataApi->get_csv_data: %s\n" % e
 ```
@@ -55,7 +56,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+**str**
 
 ### Authorization
 
@@ -69,7 +70,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **put_csv_data**
-> put_csv_data(api_key, owner, dataset, release, element, data)
+> GeneralStatus put_csv_data(api_key, owner, dataset, release, element, data)
 
 
 
@@ -92,7 +93,8 @@ element = 'element_example' # str | The element name
 data = 'data_example' # str | The CSV data to write
 
 try: 
-    api_instance.put_csv_data(api_key, owner, dataset, release, element, data)
+    api_response = api_instance.put_csv_data(api_key, owner, dataset, release, element, data)
+    pprint(api_response)
 except ApiException as e:
     print "Exception when calling DataApi->put_csv_data: %s\n" % e
 ```
@@ -110,7 +112,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**GeneralStatus**](GeneralStatus.md)
 
 ### Authorization
 
@@ -124,7 +126,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **put_kv_data**
-> put_kv_data(api_key, owner, dataset, release, element, fields)
+> GeneralStatus put_kv_data(api_key, owner, dataset, release, element, fields)
 
 
 
@@ -147,7 +149,8 @@ element = 'element_example' # str | The element name
 fields = datahub_client.KVBody() # KVBody | 
 
 try: 
-    api_instance.put_kv_data(api_key, owner, dataset, release, element, fields)
+    api_response = api_instance.put_kv_data(api_key, owner, dataset, release, element, fields)
+    pprint(api_response)
 except ApiException as e:
     print "Exception when calling DataApi->put_kv_data: %s\n" % e
 ```
@@ -165,7 +168,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**GeneralStatus**](GeneralStatus.md)
 
 ### Authorization
 

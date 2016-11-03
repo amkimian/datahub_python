@@ -15,7 +15,7 @@ Method | HTTP request | Description
 
 
 # **add_data_set**
-> add_data_set(user_id, body, api_key=api_key)
+> GeneralStatus add_data_set(user_id, body, api_key=api_key)
 
 Create a new data set, associated with the given user id
 
@@ -36,7 +36,8 @@ api_key = 'api_key_example' # str | The user api key (optional)
 
 try: 
     # Create a new data set, associated with the given user id
-    api_instance.add_data_set(user_id, body, api_key=api_key)
+    api_response = api_instance.add_data_set(user_id, body, api_key=api_key)
+    pprint(api_response)
 except ApiException as e:
     print "Exception when calling DatasetApi->add_data_set: %s\n" % e
 ```
@@ -51,7 +52,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**GeneralStatus**](GeneralStatus.md)
 
 ### Authorization
 
@@ -65,7 +66,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **delete_data_set**
-> delete_data_set(user_id, data_set, api_key=api_key)
+> GeneralStatus delete_data_set(user_id, data_set, api_key=api_key)
 
 Remove a data set and all releases and elements
 
@@ -86,7 +87,8 @@ api_key = 'api_key_example' # str | The user api key (optional)
 
 try: 
     # Remove a data set and all releases and elements
-    api_instance.delete_data_set(user_id, data_set, api_key=api_key)
+    api_response = api_instance.delete_data_set(user_id, data_set, api_key=api_key)
+    pprint(api_response)
 except ApiException as e:
     print "Exception when calling DatasetApi->delete_data_set: %s\n" % e
 ```
@@ -101,7 +103,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**GeneralStatus**](GeneralStatus.md)
 
 ### Authorization
 
@@ -356,7 +358,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **update_data_set**
-> update_data_set(api_key, owner, dataset, body)
+> GeneralStatus update_data_set(api_key, owner, dataset, body)
 
 Update an existing data set.
 
@@ -378,7 +380,8 @@ body = datahub_client.DataSet() # DataSet | DataSet object that defines the elem
 
 try: 
     # Update an existing data set.
-    api_instance.update_data_set(api_key, owner, dataset, body)
+    api_response = api_instance.update_data_set(api_key, owner, dataset, body)
+    pprint(api_response)
 except ApiException as e:
     print "Exception when calling DatasetApi->update_data_set: %s\n" % e
 ```
@@ -394,7 +397,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**GeneralStatus**](GeneralStatus.md)
 
 ### Authorization
 

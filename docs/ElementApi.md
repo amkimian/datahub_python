@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 
 # **add_element**
-> add_element(user_id, data_set, release, body, api_key=api_key)
+> GeneralStatus add_element(user_id, data_set, release, body, api_key=api_key)
 
 Create a new open element
 
@@ -34,7 +34,8 @@ api_key = 'api_key_example' # str | The user api key (optional)
 
 try: 
     # Create a new open element
-    api_instance.add_element(user_id, data_set, release, body, api_key=api_key)
+    api_response = api_instance.add_element(user_id, data_set, release, body, api_key=api_key)
+    pprint(api_response)
 except ApiException as e:
     print "Exception when calling ElementApi->add_element: %s\n" % e
 ```
@@ -51,7 +52,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**GeneralStatus**](GeneralStatus.md)
 
 ### Authorization
 
@@ -65,7 +66,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **delete_element**
-> delete_element(user_id, data_set, release, element, api_key=api_key)
+> GeneralStatus delete_element(user_id, data_set, release, element, api_key=api_key)
 
 Delete element information
 
@@ -88,7 +89,8 @@ api_key = 'api_key_example' # str | The user api key (optional)
 
 try: 
     # Delete element information
-    api_instance.delete_element(user_id, data_set, release, element, api_key=api_key)
+    api_response = api_instance.delete_element(user_id, data_set, release, element, api_key=api_key)
+    pprint(api_response)
 except ApiException as e:
     print "Exception when calling ElementApi->delete_element: %s\n" % e
 ```
@@ -105,7 +107,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**GeneralStatus**](GeneralStatus.md)
 
 ### Authorization
 

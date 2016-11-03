@@ -12,7 +12,7 @@ Method | HTTP request | Description
 
 
 # **create_scheme**
-> create_scheme(admin_key, id, body)
+> GeneralStatus create_scheme(admin_key, id, body)
 
 
 
@@ -32,7 +32,8 @@ id = 'id_example' # str | The id of the scheme
 body = datahub_client.Scheme() # Scheme | DataSet object that defines the element
 
 try: 
-    api_instance.create_scheme(admin_key, id, body)
+    api_response = api_instance.create_scheme(admin_key, id, body)
+    pprint(api_response)
 except ApiException as e:
     print "Exception when calling SchemeApi->create_scheme: %s\n" % e
 ```
@@ -47,7 +48,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**GeneralStatus**](GeneralStatus.md)
 
 ### Authorization
 
@@ -61,7 +62,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **delete_scheme**
-> delete_scheme(admin_key, id)
+> GeneralStatus delete_scheme(admin_key, id)
 
 Remove a scheme
 
@@ -81,7 +82,8 @@ id = 'id_example' # str | The id of the scheme
 
 try: 
     # Remove a scheme
-    api_instance.delete_scheme(admin_key, id)
+    api_response = api_instance.delete_scheme(admin_key, id)
+    pprint(api_response)
 except ApiException as e:
     print "Exception when calling SchemeApi->delete_scheme: %s\n" % e
 ```
@@ -95,7 +97,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**GeneralStatus**](GeneralStatus.md)
 
 ### Authorization
 
@@ -207,7 +209,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **update_scheme**
-> update_scheme(api_key, id, body)
+> GeneralStatus update_scheme(api_key, id, body)
 
 Update an existing scheme.
 
@@ -228,7 +230,8 @@ body = datahub_client.Scheme() # Scheme | Scheme object that defines the element
 
 try: 
     # Update an existing scheme.
-    api_instance.update_scheme(api_key, id, body)
+    api_response = api_instance.update_scheme(api_key, id, body)
+    pprint(api_response)
 except ApiException as e:
     print "Exception when calling SchemeApi->update_scheme: %s\n" % e
 ```
@@ -243,7 +246,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**GeneralStatus**](GeneralStatus.md)
 
 ### Authorization
 

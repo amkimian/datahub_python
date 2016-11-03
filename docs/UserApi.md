@@ -13,7 +13,7 @@ Method | HTTP request | Description
 
 
 # **delete_user**
-> delete_user(user_id, admin_key=admin_key, api_key=api_key)
+> GeneralStatus delete_user(user_id, admin_key=admin_key, api_key=api_key)
 
 
 
@@ -31,7 +31,8 @@ admin_key = 'admin_key_example' # str | The admin user api key (optional)
 api_key = 'api_key_example' # str | The user api key (optional)
 
 try: 
-    api_instance.delete_user(user_id, admin_key=admin_key, api_key=api_key)
+    api_response = api_instance.delete_user(user_id, admin_key=admin_key, api_key=api_key)
+    pprint(api_response)
 except ApiException as e:
     print "Exception when calling UserApi->delete_user: %s\n" % e
 ```
@@ -46,7 +47,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**GeneralStatus**](GeneralStatus.md)
 
 ### Authorization
 
@@ -250,7 +251,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **put_user**
-> put_user(user_id, body, api_key=api_key)
+> GeneralStatus put_user(user_id, body, api_key=api_key)
 
 
 
@@ -268,7 +269,8 @@ body = datahub_client.User() # User |
 api_key = 'api_key_example' # str | The user api key (optional)
 
 try: 
-    api_instance.put_user(user_id, body, api_key=api_key)
+    api_response = api_instance.put_user(user_id, body, api_key=api_key)
+    pprint(api_response)
 except ApiException as e:
     print "Exception when calling UserApi->put_user: %s\n" % e
 ```
@@ -283,7 +285,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**GeneralStatus**](GeneralStatus.md)
 
 ### Authorization
 
